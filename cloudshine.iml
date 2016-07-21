@@ -27,8 +27,8 @@
     <output-test url="file://$MODULE_DIR$/build/classes/test" />
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated-source/endpoints/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/endpointsSrc/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/functionalTest/java" isTestSource="true" />
@@ -47,5 +47,6 @@
     <orderEntry type="library" exported="" name="guava-19.0" level="project" />
     <orderEntry type="library" exported="" name="otto-1.3.8" level="project" />
     <orderEntry type="library" exported="" name="appengine-api-1.0-sdk-1.9.38" level="project" />
+    <orderEntry type="library" exported="" name="cloudshine.cloudshine-android-endpoints" level="project" />
   </component>
 </module>
