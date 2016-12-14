@@ -1,3 +1,5 @@
+[![](https://jitpack.io/v/Spiddekauga/cloudshine.svg)](https://jitpack.io/#Spiddekauga/cloudshine)
+
 # Cloudshine
 Cloudshine is a simple Google App Engine module with various common server functionality
 
