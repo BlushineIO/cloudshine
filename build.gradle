@@ -6,7 +6,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.google.appengine:gradle-appengine-plugin:1.9.38'
+        classpath 'com.google.appengine:gradle-appengine-plugin:1.9.48'
     }
 }
 
@@ -22,10 +22,11 @@ sourceCompatibility = JavaVersion.VERSION_1_7
 targetCompatibility = JavaVersion.VERSION_1_7
 
 dependencies {
-    appengineSdk 'com.google.appengine:appengine-java-sdk:1.9.38'
+    appengineSdk 'com.google.appengine:appengine-java-sdk:1.9.48'
     compile project(':common-utils')
-    compile 'com.google.appengine:appengine-endpoints:1.9.38'
-    compile 'com.google.appengine:appengine-endpoints-deps:1.9.38'
+    compile 'com.google.appengine:appengine-endpoints:1.9.48'
+    compile 'com.google.appengine:appengine-endpoints-deps:1.9.48'
+    compile 'com.google.api-client:google-api-client:1.23.0'
     compile 'javax.servlet:servlet-api:2.5'
 }
 
@@ -38,5 +39,6 @@ appengine {
         getClientLibsOnBuild = true
         getDiscoveryDocsOnBuild = true
         serviceClasses = ['com.spiddekauga.cloudshine.FeedbackEndpoint']
+        googleClientVersion = '1.23.0'
     }
 }
