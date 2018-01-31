@@ -5,7 +5,7 @@
 		<servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
 		<init-param>
 			<param-name>services</param-name>
-			<param-value>com.spiddekauga.cloudshine.FeedbackEndpoint</param-value>
+			<param-value>io.blushine.cloudshine.FeedbackEndpoint</param-value>
 		</init-param>
 	</servlet>
 	<servlet-mapping>

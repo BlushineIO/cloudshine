@@ -4,12 +4,11 @@
    https://github.com/GoogleCloudPlatform/gradle-appengine-templates/tree/master/HelloWorld
 */
 
-package com.spiddekauga.cloudshine;
+package io.blushine.cloudshine;
 
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.ApiNamespace;
-import com.spiddekauga.utils.Strings;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Date;
@@ -22,8 +21,10 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-import static com.spiddekauga.cloudshine.ServerConfig.ADMIN_EMAIL_ADDRESS;
-import static com.spiddekauga.cloudshine.ServerConfig.APP_EMAIL;
+import io.blushine.utils.Strings;
+
+import static io.blushine.cloudshine.ServerConfig.ADMIN_EMAIL_ADDRESS;
+import static io.blushine.cloudshine.ServerConfig.APP_EMAIL;
 
 @Api(
 		name = "feedbackApi",

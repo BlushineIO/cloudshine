@@ -1,4 +1,4 @@
-package com.spiddekauga.cloudshine;
+package io.blushine.cloudshine;
 
 import java.util.Date;
 
