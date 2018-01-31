@@ -11,7 +11,7 @@ import javax.mail.internet.InternetAddress;
  */
 public class ServerConfig {
 public static final String APP_NAME = ApiProxy.getCurrentEnvironment().getAppId().substring(2);
-public static final String ADMIN_EMAIL = "matteus.magnusson@spiddekauga.com";
+public static final String ADMIN_EMAIL = "matteus@blushine.io";
 public static final String APP_EMAIL = "noreply@" + APP_NAME + ".appspotmail.com";
 public static final InternetAddress APP_EMAIL_ADDRESS;
 public static final InternetAddress ADMIN_EMAIL_ADDRESS;

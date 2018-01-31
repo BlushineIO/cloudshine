@@ -30,7 +30,7 @@ import static io.blushine.cloudshine.ServerConfig.APP_EMAIL;
 		name = "feedbackApi",
 		version = "v1",
 		namespace = @ApiNamespace(
-				ownerDomain = "cloudshine.spiddekauga.com",
+				ownerDomain = "cloudshine.blushine.io",
 				ownerName = "Spiddekauga"
 		)
 )
@@ -59,23 +59,23 @@ private static final class Message {
 	private InternetAddress mFrom = null;
 	private String mMessage = "";
 	private Date mDate;
-
+	
 	private void build(Feedback feedback) {
 		buildAddresses(feedback);
 		buildTitle(feedback);
 		buildMessage(feedback);
 		mDate = feedback.getDate();
 	}
-
+	
 	private void buildAddresses(Feedback feedback) {
 		String replyToEmail = feedback.getEmail();
 		String fromEmail = ServerConfig.APP_EMAIL;
-
+		
 		String name = feedback.getName();
 		if (name == null || name.isEmpty()) {
 			name = "Anonymous";
 		}
-
+		
 		try {
 			if (replyToEmail != null) {
 				mReplyTo[0] = new InternetAddress(replyToEmail, name);
@@ -86,20 +86,20 @@ private static final class Message {
 			throw new RuntimeException(e);
 		}
 	}
-
+	
 	private void buildTitle(Feedback feedback) {
 		// Title
 		String title = feedback.getTitle();
 		if (title != null) {
 			mTitle += title;
 		}
-
+		
 		// App name
 		if (mTitle.length() > 0) {
 			mTitle += " ";
 		}
 		mTitle += "#" + feedback.getAppName() + " ";
-
+		
 		// FeedbackEndpoint type
 		if (feedback.isBugReport()) {
 			if (feedback.hasException()) {
@@ -111,19 +111,19 @@ private static final class Message {
 			mTitle += "#feedback";
 		}
 	}
-
+	
 	private void buildMessage(Feedback feedback) {
 		// Message
 		String message = feedback.getMessageHtml();
 		if (message != null && !message.isEmpty()) {
 			mMessage += message + "<br />\n<br />\n";
 		}
-
+		
 		// Application information
 		mMessage += "<strong>Application Information</strong><br />\n" +
 				feedback.getAppName() + "-" + feedback.getAppVersion() + "<br />\n" +
 				feedback.getDeviceInfoHtml();
-
+		
 		// Exception
 		if (feedback.hasException()) {
 			mMessage += "<br />\n<br />\n" +
@@ -131,7 +131,7 @@ private static final class Message {
 					feedback.getExceptionHtml();
 		}
 	}
-
+	
 	void send() {
 		Properties properties = new Properties();
 		Session session = Session.getDefaultInstance(properties);
